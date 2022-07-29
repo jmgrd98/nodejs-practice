@@ -4,7 +4,7 @@ const app = express();
 
 app.route("/").get((req, res) => {
     axios.get('https://api.github.com/users/jmgrd98')
-    .then(result => res.send(`<img src="${result.data.avatar_url}">np`))
+    .then(result => res.send(result.data))
     .catch(error => console.error(error))
 } )
 
